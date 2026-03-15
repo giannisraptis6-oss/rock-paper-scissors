@@ -1,7 +1,7 @@
 // FIRST I WILL WRITE THE PSEDOCODE!
 // WE WANT THE GETCOMPUTERCHOICE FUNCTION TO MAKE THE MATH.RANDOM USE AND GET A RANDOM NUMBER THAT WILL DECLARE THE CHOICE IT WILL GET FORM -ROCK-PAPER-SCISSOERS-
-// function getComputerChoice (   Math.random()  )   {
-//  if choice 1 then computer choice id rock
+// function getComputerChoice ( Math.floor(  Math.random() ) )   {
+//  if choice 1 then computer choice is rock
 //  else if choice 2 the computer choice is paper
 //  else choice 3 the computer choice is scissors
 //  return computer choice ()   }
@@ -20,5 +20,14 @@ function getComputerChoice() {
 //   console.log(getComputerChoice());
 // }
 
+// NOW I HAVE TO WRITE THE FUNCTION THAT GET THE HUMAN CHOICE LIKE THE SAME WAY BUT 
+// THE HUMAN HAS TO WRITE THE ANSWER AND PUT IT IN A CONST LIKE TO COMPUTERS ONE
+// THE STRUCTURE WILL BE LIKE THIS :
+function getPlayerChoice(){
+    let choices = ["rock","scissors","paper"] ;
+    let input = prompt("PLEASE ENTER YOUR ANSWER: ROCK,PAPER OR SCISSORS").toLowerCase();
+    
 
-
+    // return plChoice[${}];
+}
+console.log(getPlayerChoice());
