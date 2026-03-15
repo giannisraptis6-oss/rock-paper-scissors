@@ -9,23 +9,16 @@
 // NOW WILL ONLY GET 0-1-2 AND MUCH THE NUMBERS TI THE ROCK-PAPER-SCISSORS
 // console.log(Math.floor( Math.random()*3))
 
+
 function getComputerChoice() {
-  let cmptChoice= Math.floor(Math.random() * 3);
-  if (cmptChoice===0 ){
-    console.log("The COMPUTER choose , ROCK");
-    
-  }
-  else if ( cmptChoice===1){
-    console.log("The COMPUTER choose , PAPER")
-  }
-  else {
-    console.log("The COMPUTER choose , SCISSORS")
-  }
-return cmptChoice
+  const choices = ["ROCK", "SCISSORS", "PAPER"];
+  const cmptChoice = Math.floor(Math.random() * 3);
+  console.log(`COMPUTER chooses ${choices[cmptChoice]}`);
+  return cmptChoice;
 }
+// for (let i = 0; i <= 4; i++) {
+//   console.log(getComputerChoice());
+// }
 
 
 
-for (let i = 0; i <= 4; i++) {
-  console.log(getComputerChoice());
-}
