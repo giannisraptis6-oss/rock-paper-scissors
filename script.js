@@ -37,7 +37,7 @@ function getPlayerChoice() {
   } else {
     prompt("YOUR ANSWER IS WRONG");
   }
-  return choices[plChoice];
+  return plChoice;
 }
 // console.log(getPlayerChoice());
 
@@ -46,39 +46,49 @@ function getPlayerChoice() {
 // WE HAVE TO CREATE ONE MORE FUNCTION NAMES playRound WE HAVE TO DIFINE TWO PARAMETERS FOR playRound:humanChoice& computerChoice
 // THE FUNCTION playRound will compare the two results and announce the winner evry time
 // "You lose!Raper beats Rock"
-function playRound(plChoice,cmptChoice) {
-  let playerScore = 0;
-  let computerScore = 0;
-
-
-
+let playerScore=0
+let computerScore=0
+function playRound() {
   if (cmptChoice === plChoice) {
     console.log("THE ROUND IS A DRAW");
-    playerScore +1;
-    computerScore +1;
+    playerScore++;
+    computerScore++;
   } else if (plChoice === 2 && cmptChoice === 0) {
     console.log("You Win,paper wins rock");
-    playerScore +1
+    playerScore++;
   } else if (plChoice === 0 && cmptChoice === 1) {
     console.log("You Win,rock wins scissors");
-        playerScore +1
-
+    playerScore++;
   } else if (plChoice === 1 && cmptChoice === 2) {
     console.log("You Win,scissors wins paper");
-        playerScore +1
-
-  } else if (plChoice === 2 && cmptChoice === 1) {
-    console.log("You Lose,scissors wins paper");
-    computerScore + 1
+    playerScore++;
+  } else if (plChoice === 2 && cmptChoice === 0) {
+    console.log("You Lose,rock wins scissors");
+    computerScore++;
   } else if (plChoice === 0 && cmptChoice === 2) {
-    console.log("You Lose,rock wins scissors");
-        computerScore + 1
-
+    console.log("You Lose,paper wins rock");
+    computerScore++;
   } else {
-    console.log("You Lose,rock wins scissors");
-        computerScore + 1
-
+    console.log("You Lose,scissors wins paper");
+    computerScore++;
   }
-  console.log(`THE SCORE IS ,PLAYER: ${playerScore} - COMPUTER:${computerScore}`)
+  console.log(
+    `THE SCORE IS ,PLAYER: ${playerScore} - COMPUTER:${computerScore}`,
+  );
 }
+// NOW I HAVE TO MIX IT TOGETHER AND IN THE END FIND THE WINER OF THE GAME WITH A SIMPLE IF PLAYRSCORE>COMPUTERSCORE THE WINER IS THE PLAYER
+// ELSE IF PLAYERSCORE===COMPUTERSCORE THE FINAL SCORE IS A DRAW
+// ELSE THE GAME WINER IS THE COMPUTER
 
+// function playGame(){
+// for (let i = 0; i<=4; i++){
+//  let pResult= getPlayerChoice()
+//  let cResult =getComputerChoice()
+//  console.log(playRound(pResult,cResult));
+
+// }
+// }
+
+const player = getPlayerChoice();
+const computer = getComputerChoice();
+playRound(cmptChoice, plChoice);
