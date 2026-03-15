@@ -23,20 +23,50 @@ function getComputerChoice() {
 // THE HUMAN HAS TO WRITE THE ANSWER AND PUT IT IN A CONST LIKE TO COMPUTERS ONE
 // THE STRUCTURE WILL BE LIKE THIS :
 function getPlayerChoice() {
-  let plCHoice;
+  let plChoice;
   let choices = ["rock", "scissors", "paper"];
   let input = prompt(
     "PLEASE ENTER YOUR ANSWER: ROCK,PAPER OR SCISSORS",
   ).toLowerCase();
   if (input === "rock") {
-    plCHoice = 0;
+    plChoice = 0;
   } else if (input === "scissors") {
-    plCHoice = 1;
+    plChoice = 1;
   } else if (input === "paper") {
-    plCHoice = 2;
+    plChoice = 2;
   } else {
     prompt("YOUR ANSWER IS WRONG");
   }
-//   return choices[plCHoice];
+  return choices[plChoice];
 }
-// console.log(getPlayerChoice());
+console.log(getPlayerChoice());
+
+
+// NOW WE HAVE TO KEEP TRACK OF THE SCORE BETWEEN THE HUMAN AND THE COMPUTER 
+// WE HAVE TO USE THOSE TWO VARIABLES THE FIRST ONE BEENING humanScore AND THE OTHER ONE IS computerScore
+// WE HAVE TO CREATE ONE MORE FUNCTION NAMES playRound WE HAVE TO DIFINE TWO PARAMETERS FOR playRound:humanChoice& computerChoice
+// THE FUNCTION playRound will compare the two results and announce the winner evry time
+// "You lose!Raper beats Rock"
+function playRound(){
+   if (cmptChoice===plChoice){
+    console.log("THE ROUND IS A DRAW")
+   }
+   else if ( plChoice===2&&cmptChoice===0){
+    console.log("You Win,paper wins rock")
+   } 
+    else if ( plChoice===0&&cmptChoice===1){
+    console.log("You Win,rock wins scissors")
+   } 
+    else if ( plChoice===1&&cmptChoice===2){
+    console.log("You Win,scissors wins paper")
+   } 
+    else if ( plChoice===2&&cmptChoice===1){
+    console.log("You Lose,scissors wins paper")
+   } 
+    else if ( plChoice===0&&cmptChoice===2){
+    console.log("You Lose,rock wins scissors")
+   } 
+    else if ( plChoice===1&&cmptChoice===0){
+    console.log("You Lose,rock wins scissors")
+   } 
+}
