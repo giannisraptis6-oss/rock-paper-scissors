@@ -48,7 +48,7 @@ function getPlayerChoice() {
 // "You lose!Raper beats Rock"
 let playerScore=0
 let computerScore=0
-function playRound() {
+function playRound(cmptChoice,plChoice) {
   if (cmptChoice === plChoice) {
     console.log("THE ROUND IS A DRAW");
     playerScore++;
@@ -79,16 +79,9 @@ function playRound() {
 // NOW I HAVE TO MIX IT TOGETHER AND IN THE END FIND THE WINER OF THE GAME WITH A SIMPLE IF PLAYRSCORE>COMPUTERSCORE THE WINER IS THE PLAYER
 // ELSE IF PLAYERSCORE===COMPUTERSCORE THE FINAL SCORE IS A DRAW
 // ELSE THE GAME WINER IS THE COMPUTER
+const computer = getComputerChoice()
+const player = getPlayerChoice();       
 
-// function playGame(){
-// for (let i = 0; i<=4; i++){
-//  let pResult= getPlayerChoice()
-//  let cResult =getComputerChoice()
-//  console.log(playRound(pResult,cResult));
+playRound(computer,player );
 
-// }
-// }
 
-const player = getPlayerChoice();
-const computer = getComputerChoice();
-playRound(cmptChoice, plChoice);
