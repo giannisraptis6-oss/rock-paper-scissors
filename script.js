@@ -36,6 +36,7 @@ function getPlayerChoice() {
   return plChoice;
 }
 
+
 // NOW WE HAVE TO KEEP TRACK OF THE SCORE BETWEEN THE HUMAN AND THE COMPUTER
 // WE HAVE TO USE THOSE TWO VARIABLES THE FIRST ONE BEENING humanScore AND THE OTHER ONE IS computerScore
 // WE HAVE TO CREATE ONE MORE FUNCTION NAMES playRound WE HAVE TO DIFINE TWO PARAMETERS FOR playRound:humanChoice& computerChoice
@@ -57,7 +58,7 @@ function playRound(cmptChoice, plChoice) {
   } else if (plChoice === 1 && cmptChoice === 2) {
     console.log("You Win,scissors wins paper");
     playerScore++;
-  } else if (plChoice === 2 && cmptChoice === 0) {
+  } else if (plChoice === 1 && cmptChoice === 0) {
     console.log("You Lose,rock wins scissors");
     computerScore++;
   } else if (plChoice === 0 && cmptChoice === 2) {
@@ -93,3 +94,4 @@ function playGame() {
   }
 }
 playGame()
+
