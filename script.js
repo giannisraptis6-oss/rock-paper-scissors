@@ -10,8 +10,22 @@
 // console.log(Math.floor( Math.random()*3))
 
 function getComputerChoice() {
-  return Math.floor(Math.random() * 3);
+  let cmptChoice= Math.floor(Math.random() * 3);
+  if (cmptChoice===0 ){
+    console.log("The COMPUTER choose , ROCK");
+    
+  }
+  else if ( cmptChoice===1){
+    console.log("The COMPUTER choose , PAPER")
+  }
+  else {
+    console.log("The COMPUTER choose , SCISSORS")
+  }
+return cmptChoice
 }
+
+
+
 for (let i = 0; i <= 4; i++) {
   console.log(getComputerChoice());
 }
