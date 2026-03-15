@@ -15,10 +15,6 @@ function getComputerChoice() {
   console.log(`COMPUTER chooses ${choices[cmptChoice]}`);
   return cmptChoice;
 }
-// for (let i = 0; i <= 4; i++) {
-//   console.log(getComputerChoice());
-// }
-
 // NOW I HAVE TO WRITE THE FUNCTION THAT GET THE HUMAN CHOICE LIKE THE SAME WAY BUT
 // THE HUMAN HAS TO WRITE THE ANSWER AND PUT IT IN A CONST LIKE TO COMPUTERS ONE
 // THE STRUCTURE WILL BE LIKE THIS :
@@ -39,16 +35,15 @@ function getPlayerChoice() {
   }
   return plChoice;
 }
-// console.log(getPlayerChoice());
 
 // NOW WE HAVE TO KEEP TRACK OF THE SCORE BETWEEN THE HUMAN AND THE COMPUTER
 // WE HAVE TO USE THOSE TWO VARIABLES THE FIRST ONE BEENING humanScore AND THE OTHER ONE IS computerScore
 // WE HAVE TO CREATE ONE MORE FUNCTION NAMES playRound WE HAVE TO DIFINE TWO PARAMETERS FOR playRound:humanChoice& computerChoice
 // THE FUNCTION playRound will compare the two results and announce the winner evry time
 // "You lose!Raper beats Rock"
-let playerScore=0
-let computerScore=0
-function playRound(cmptChoice,plChoice) {
+let playerScore = 0;
+let computerScore = 0;
+function playRound(cmptChoice, plChoice) {
   if (cmptChoice === plChoice) {
     console.log("THE ROUND IS A DRAW");
     playerScore++;
@@ -79,9 +74,22 @@ function playRound(cmptChoice,plChoice) {
 // NOW I HAVE TO MIX IT TOGETHER AND IN THE END FIND THE WINER OF THE GAME WITH A SIMPLE IF PLAYRSCORE>COMPUTERSCORE THE WINER IS THE PLAYER
 // ELSE IF PLAYERSCORE===COMPUTERSCORE THE FINAL SCORE IS A DRAW
 // ELSE THE GAME WINER IS THE COMPUTER
-const computer = getComputerChoice()
-const player = getPlayerChoice();       
 
-playRound(computer,player );
+function playGame() {
+  for (let i = 0; i <= 4; i++) {
+    console.log(`ROUND ${i + 1}`);
+    const computer = getComputerChoice();
+    const player = getPlayerChoice();
+    playRound(computer, player);
+  }
+  console.log("GAME OVER");
 
-
+  if (playerScore > computerScore) {
+    console.log("FINAL RESULT: You WIN the game!");
+  } else if (playerScore < computerScore) {
+    console.log("FINAL RESULT: You LOSE the game!");
+  } else {
+    console.log("FINAL RESULT: The game is a DRAW!");
+  }
+}
+playGame()
