@@ -5,7 +5,13 @@
 //  else if choice 2 the computer choice is paper
 //  else choice 3 the computer choice is scissors
 //  return computer choice ()   }
-// WHITH MATH FLOOR WE CHOOP THE .00 AND KEEP THE FIRST ONE 
+// WHITH MATH FLOOR WE CHOOP THE .00 AND KEEP THE FIRST ONE
 // NOW WILL ONLY GET 0-1-2 AND MUCH THE NUMBERS TI THE ROCK-PAPER-SCISSORS
 // console.log(Math.floor( Math.random()*3))
 
+function getComputerChoice() {
+  return Math.floor(Math.random() * 3);
+}
+for (let i = 0; i <= 4; i++) {
+  console.log(getComputerChoice());
+}
