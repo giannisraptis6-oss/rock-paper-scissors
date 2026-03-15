@@ -9,7 +9,6 @@
 // NOW WILL ONLY GET 0-1-2 AND MUCH THE NUMBERS TI THE ROCK-PAPER-SCISSORS
 // console.log(Math.floor( Math.random()*3))
 
-
 function getComputerChoice() {
   const choices = ["ROCK", "SCISSORS", "PAPER"];
   const cmptChoice = Math.floor(Math.random() * 3);
@@ -20,14 +19,24 @@ function getComputerChoice() {
 //   console.log(getComputerChoice());
 // }
 
-// NOW I HAVE TO WRITE THE FUNCTION THAT GET THE HUMAN CHOICE LIKE THE SAME WAY BUT 
+// NOW I HAVE TO WRITE THE FUNCTION THAT GET THE HUMAN CHOICE LIKE THE SAME WAY BUT
 // THE HUMAN HAS TO WRITE THE ANSWER AND PUT IT IN A CONST LIKE TO COMPUTERS ONE
 // THE STRUCTURE WILL BE LIKE THIS :
-function getPlayerChoice(){
-    let choices = ["rock","scissors","paper"] ;
-    let input = prompt("PLEASE ENTER YOUR ANSWER: ROCK,PAPER OR SCISSORS").toLowerCase();
-    
-
-    // return plChoice[${}];
+function getPlayerChoice() {
+  let plCHoice;
+  let choices = ["rock", "scissors", "paper"];
+  let input = prompt(
+    "PLEASE ENTER YOUR ANSWER: ROCK,PAPER OR SCISSORS",
+  ).toLowerCase();
+  if (input === "rock") {
+    plCHoice = 0;
+  } else if (input === "scissors") {
+    plCHoice = 1;
+  } else if (input === "paper") {
+    plCHoice = 2;
+  } else {
+    prompt("YOUR ANSWER IS WRONG");
+  }
+//   return choices[plCHoice];
 }
-console.log(getPlayerChoice());
+// console.log(getPlayerChoice());
