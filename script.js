@@ -39,34 +39,46 @@ function getPlayerChoice() {
   }
   return choices[plChoice];
 }
-console.log(getPlayerChoice());
+// console.log(getPlayerChoice());
 
-
-// NOW WE HAVE TO KEEP TRACK OF THE SCORE BETWEEN THE HUMAN AND THE COMPUTER 
+// NOW WE HAVE TO KEEP TRACK OF THE SCORE BETWEEN THE HUMAN AND THE COMPUTER
 // WE HAVE TO USE THOSE TWO VARIABLES THE FIRST ONE BEENING humanScore AND THE OTHER ONE IS computerScore
 // WE HAVE TO CREATE ONE MORE FUNCTION NAMES playRound WE HAVE TO DIFINE TWO PARAMETERS FOR playRound:humanChoice& computerChoice
 // THE FUNCTION playRound will compare the two results and announce the winner evry time
 // "You lose!Raper beats Rock"
-function playRound(){
-   if (cmptChoice===plChoice){
-    console.log("THE ROUND IS A DRAW")
-   }
-   else if ( plChoice===2&&cmptChoice===0){
-    console.log("You Win,paper wins rock")
-   } 
-    else if ( plChoice===0&&cmptChoice===1){
-    console.log("You Win,rock wins scissors")
-   } 
-    else if ( plChoice===1&&cmptChoice===2){
-    console.log("You Win,scissors wins paper")
-   } 
-    else if ( plChoice===2&&cmptChoice===1){
-    console.log("You Lose,scissors wins paper")
-   } 
-    else if ( plChoice===0&&cmptChoice===2){
-    console.log("You Lose,rock wins scissors")
-   } 
-    else if ( plChoice===1&&cmptChoice===0){
-    console.log("You Lose,rock wins scissors")
-   } 
+function playRound(plChoice,cmptChoice) {
+  let playerScore = 0;
+  let computerScore = 0;
+
+
+
+  if (cmptChoice === plChoice) {
+    console.log("THE ROUND IS A DRAW");
+    playerScore +1;
+    computerScore +1;
+  } else if (plChoice === 2 && cmptChoice === 0) {
+    console.log("You Win,paper wins rock");
+    playerScore +1
+  } else if (plChoice === 0 && cmptChoice === 1) {
+    console.log("You Win,rock wins scissors");
+        playerScore +1
+
+  } else if (plChoice === 1 && cmptChoice === 2) {
+    console.log("You Win,scissors wins paper");
+        playerScore +1
+
+  } else if (plChoice === 2 && cmptChoice === 1) {
+    console.log("You Lose,scissors wins paper");
+    computerScore + 1
+  } else if (plChoice === 0 && cmptChoice === 2) {
+    console.log("You Lose,rock wins scissors");
+        computerScore + 1
+
+  } else {
+    console.log("You Lose,rock wins scissors");
+        computerScore + 1
+
+  }
+  console.log(`THE SCORE IS ,PLAYER: ${playerScore} - COMPUTER:${computerScore}`)
 }
+
